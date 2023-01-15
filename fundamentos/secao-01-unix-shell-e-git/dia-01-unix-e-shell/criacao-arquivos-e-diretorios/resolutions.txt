@@ -1,0 +1,49 @@
+ 
+➜  criacao-arquivos-e-diretorios git:(exercises-1-1) ✗ mkdir unix-tests && cd $_
+➜  unix-tests git:(exercises-1-1) ✗ touch trybe.txt
+➜  unix-tests git:(exercises-1-1) ✗ cp trybe.txt trybe_backup.txt
+➜  unix-tests git:(exercises-1-1) ✗  mv trybe.txt outro_nome.txt 
+➜  unix-tests git:(exercises-1-1) ✗ mkdir backup
+➜  unix-tests git:(exercises-1-1) ✗ mv trybe_backup.txt ./backup/trybe_backup.txt
+➜  unix-tests git:(exercises-1-1) ✗ ls
+backup  outro_nome.txt
+➜  unix-tests git:(exercises-1-1) ✗ cd backup
+➜  backup git:(exercises-1-1) ✗ ls
+trybe_backup.txt
+➜  backup git:(exercises-1-1) ✗ cd ..
+➜  unix-tests git:(exercises-1-1) ✗ mkdir backup2
+➜  unix-tests git:(exercises-1-1) ✗ mv ./backup/trybe_backup.txt backup2/trybe_backup.txt
+➜  unix-tests git:(exercises-1-1) ✗ cd backup2
+➜  backup2 git:(exercises-1-1) ✗ ls
+trybe_backup.txt
+➜  backup2 git:(exercises-1-1) ✗ cd ..
+➜  unix-tests git:(exercises-1-1) ✗ rmdir backup
+➜  unix-tests git:(exercises-1-1) ✗ mv backup2/ backup
+➜  unix-tests git:(exercises-1-1) ✗ ls
+backup  outro_nome.txt
+➜  unix-tests git:(exercises-1-1) ✗ pwd
+/home/zorah/Trybe/trybe-exercises/fundamentos/secao-01-unix-shell-e-git/dia-01-unix-e-shell/criacao-arquivos-e-diretorios/unix-tests
+➜  unix-tests git:(exercises-1-1) ✗ ls -l
+total 0
+drwxr-xr-x 1 zorah zorah 32 jan 15 14:15 backup
+-rw-r--r-- 1 zorah zorah  0 jan 15 14:11 outro_nome.txt
+➜  unix-tests git:(exercises-1-1) ✗ rm -rf backup
+➜  unix-tests git:(exercises-1-1) ✗ ls
+outro_nome.txt
+➜  unix-tests git:(exercises-1-1) ✗ clear
+➜  unix-tests git:(exercises-1-1) ✗ ls
+outro_nome.txt  skills.txt
+➜  unix-tests git:(exercises-1-1) ✗ head -n 5 skills.txt 
+Internet
+Unix
+Bash
+HTML
+CSS
+➜  unix-tests git:(exercises-1-1) ✗ tail -n 4 skills.txt 
+CSS
+JavaScript
+React
+SQL 
+➜  unix-tests git:(exercises-1-1) ✗ rm *.txt
+➜  unix-tests git:(exercises-1-1) ✗ ls
+➜  unix-tests git:(exercises-1-1) ✗ 
