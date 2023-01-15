@@ -1,0 +1,89 @@
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve$ mkdir first_git && cd $_
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git init
+Initialized empty Git repository in /home/zorah/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git/.git/
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ codium .
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ touch README.md
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git add .
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git commit -m "Added README file"
+[main (root-commit) 74e26b7] Added README file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+ zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout -b "update-readme"
+Switched to a new branch 'update-readme'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git add .
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git commit -m "Updating README"
+[update-readme a8ff5c4] Updating README
+ 1 file changed, 1 insertion(+)
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout main
+Switched to branch 'main'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git merge update-readme 
+Updating 74e26b7..a8ff5c4
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout -b atualiza-readme
+Switched to a new branch 'atualiza-readme'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ touch infos.txt
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git add .
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git commit -m "added infos"
+[atualiza-readme be46dea] added infos
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 infos.txt
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ cat > infos.txt 
+Heitor
+OLiveira
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git add .
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git commit -m "Infos filled"
+[atualiza-readme f44ecef] Infos filled
+ 1 file changed, 2 insertions(+)
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout -b adiciona-infos
+Switched to a new branch 'adiciona-infos'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git add .
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git commit -m "How versioning works"
+[adiciona-infos 06cf979] How versioning works
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout atualiza-readme 
+Switched to branch 'atualiza-readme'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git branch
+  adiciona-infos
+* atualiza-readme
+  main
+  update-readme
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git merge adiciona-infos
+Updating f44ecef..06cf979
+Fast-forward
+ README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git checkout main
+Switched to branch 'main'
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/dia-03-git-o-que-e-e-para-que-serve/first_git$ git merge atualiza-readme 
+Updating a8ff5c4..06cf979
+Fast-forward
+ README.md | 11 ++++++++++-
+ infos.txt |  2 ++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 infos.txt

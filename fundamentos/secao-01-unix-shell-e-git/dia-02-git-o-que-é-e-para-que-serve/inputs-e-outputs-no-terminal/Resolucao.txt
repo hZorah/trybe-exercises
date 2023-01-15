@@ -1,0 +1,83 @@
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git$ mkdir unix_tests_skills && cd $_
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat >> skills2.txt
+Internet
+Unix
+Bash
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat >> skills2.txt
+React
+Node
+MySQL
+HTML
+CSS
+cat skills2.txt
+Internet
+Unix
+Bash
+React
+Node
+MySQL
+HTML
+CSS
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ wc -l skills2.txt 
+8 skills2.txt
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ head -3 skills2.txt | sort > top_skills.txt 
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat top_skills.txt
+Bash
+Internet
+Unix
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat >> phrases2.txt
+Bruto
+Barata
+Roberto
+Banana
+Ratob
+Xenomorpho
+Eita nois
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ grep -i "br" phrases2.txt | wc -l 
+1
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ grep -iv "br" phrases2.txt | wc -l 
+6
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat >> phrases2.txt 
+Brasil
+Alemanha
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cp countries.txt bunch_of_things.txt
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat phrases2.txt >> bunch_of_things.txt
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat bunch_of_things.txt 
+Argentina
+Uruguai
+Bruto
+Barata
+Roberto
+Banana
+Ratob
+Xenomorpho
+Eita nois
+Brasil
+Alemanha
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ sort bunch_of_things.txt -o bunch_of_things.txt 
+
+zorah@zorah-nitro-biglinux:~/Trybe/trybe-exercicios/fundamentos/secao-01-unix-shell-e-git/unix_tests_skills$ cat bunch_of_things.txt 
+Alemanha
+Argentina
+Banana
+Barata
+Brasil
+Bruto
+Eita nois
+Ratob
+Roberto
+Uruguai
+Xenomorpho
