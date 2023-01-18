@@ -1,0 +1,21 @@
+➜  permissoes git:(exercicios/fundamentos-introducao_html.dia_01_estruturas_de_pagina) git checkout -b exercicios/fundamentos-unix_bash.dia_02_parte2
+Switched to a new branch 'exercicios/fundamentos-unix_bash.dia_02_parte2'
+➜  permissoes git:(exercicios/fundamentos-unix_bash.dia_02_parte2) mkdir unix_tests_permissions
+➜  permissoes git:(exercicios/fundamentos-unix_bash.dia_02_parte2) cd unix_tests_permissions 
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ls -l
+total 0
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) touch arquivo_teste.txt
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ chmod a+rw arquivo_teste.txt 
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ ls -l
+total 0
+-rw-rw-rw- 1 zorah zorah 0 jan 18 09:15 arquivo_teste.txt
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ chmod a-w arquivo_teste.txt 
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ ls -l
+total 0
+-r--r--r-- 1 zorah zorah 0 jan 18 09:15 arquivo_teste.txt
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ chmod 644 arquivo_teste.txt
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ ls -l
+total 0
+-rw-r--r-- 1 zorah zorah 0 jan 18 09:15 arquivo_teste.txt
+➜  unix_tests_permissions git:(exercicios/fundamentos-unix_bash.dia_02_parte2) ✗ 
+ 
